@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<global-property doc:name="Global Property" doc:id="51b5fe92-3ed9-47ac-a21e-350612ee6aef" name="env" value="staging" />
+	<configuration-properties doc:name="Configuration properties" doc:id="ac2ff8a2-e19d-4544-993d-c415348e69ae" file="${env}.properties" />
+	<db:config name="Database_Config" doc:name="Database Config" doc:id="d3302338-cfb8-4671-9ec7-3de2df2a679b" >
+		<db:generic-connection driverClassName="org.postgresql.Driver" url="jdbc:postgresql://ep-blue-king-a6ctqr40.us-west-2.aws.neon.tech/CustomerDB?sslmode=require" password="fTwDlRF7QG3E" user="CustomerDB_owner"/>
+	</db:config>
+</mule>
